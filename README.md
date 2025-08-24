@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-pip install -e .
+pip install common-sense
 ```
 
 ## Quick Usage

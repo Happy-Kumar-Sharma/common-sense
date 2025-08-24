@@ -18,7 +18,21 @@ def test_future_truth():
     assert isinstance(future_truth(), str)
 
 def test_agree():
-    assert 'Absolutely' in agree('Python is great') or 'agree' in agree('Python is great')
+    possible = [
+        f"Absolutely, Python is great.",
+        f"I couldn't agree more: Python is great.",
+        f"You nailed it: Python is great.",
+        f"Preach! Python is great.",
+        f"So true: Python is great."
+    ]
+    assert agree('Python is great') in possible
 
 def test_disagree():
-    assert 'differ' in disagree('No way') or 'disagree' in disagree('No way')
+    possible = [
+        f"I beg to differ: No way.",
+        f"Not quite: No way.",
+        f"I see it differently: No way.",
+        f"That’s debatable: No way.",
+        f"I respectfully disagree: No way."
+    ]
+    assert disagree('No way') in possible
